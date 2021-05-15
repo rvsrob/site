@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html data-theme="light">
+<head>
+  <title>Vote for Thunderstruck | Discord Bots</title>
+    <meta charset="utf-8">
+<meta name="mobile-web-app-capable" content="no">
+<meta name="theme-color" content="#7289DA">
+<link rel="icon" href="https://top.gg/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script>
+      if (localStorage.getItem('dark') === 'true') {
+        let theme_node = document.createElement('link');
+        theme_node.id = 'dtssheet';
+        theme_node.rel = 'stylesheet';
+        theme_node.href = '/stylesheets/darktheme.css';
+        document.head.appendChild(theme_node);
+        localStorage.setItem('dark', 'true');
+      }
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" type="text/css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/button.min.css' />
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.0/components/icon.min.css' />
+<link rel="stylesheet" href='https://cdn.top.gg/web-assets/style.min.css' />
+<script src="https://top.gg/js/web.js"></script>
+
+
+    <meta name="description" content="Vote for Thunderstruck on Discord Bot List">
+
+      <link rel="manifest" href="https://top.gg/manifest.json"/>
+      <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-messaging.js"></script>
+      <script src="https://www.google.com/recaptcha/api.js?render=6LeA8rQUAAAAAFURdAirufNUOk5nU8nIJklS1MP4"></script>
+
+      <meta name="twitter:card" value="summary">
+      <meta name="twitter:title" content="Thunderstruck">
+      <meta name="twitter:description" content="Vote for Thunderstruck on Discord Bot List">
+      <meta name="twitter:image"
+        content="https://images.discordapp.net/avatars/731573262659747920/16e236b4ab69c5ef547cc1828b57c226.png?size=512">
+      <meta name="robots" content="noindex, follow">
+      <meta name="og:site_name" value="Discord Bot List">
+      <meta name="og:title" content="Thunderstruck" />
+      <meta name="og:url" content="https://top.gg/" />
+      <meta name="og:description" content="Vote for Thunderstruck on Discord Bot List">
+      <meta name="og:image"
+        content="https://images.discordapp.net/avatars/731573262659747920/16e236b4ab69c5ef547cc1828b57c226.png?size=512" />
+      <!-- Venatus Market v3 -->
+<script>
+(function() {
+document.write('<div id="vmv3-ad-manager" style="display:none"></div>');
+document
+.getElementById("vmv3-ad-manager")
+.innerHTML = '<iframe id="vmv3-frm" src="javascript:\'<html><body></body></html>\'" width="0" height="0" data-mode="scan" data-site-id="5b608a2046e0fb0001330d9b"></iframe>';
+var loaderFrame = document.getElementById("vmv3-frm");
+var loaderFrameWindow = loaderFrame.contentWindow ? loaderFrame.contentWindow : loaderFrame.contentDocument;
+loaderFrameWindow.document.open();
+loaderFrameWindow.document.write('<scr'+'ipt src="https://hb.vntsm.com/v3/live/ad-manager.min.js" type="text/javascript" async>'+'</scr'+'ipt>');
+loaderFrameWindow.document.close();
+})();
+</script>
+<!-- / Venatus Market v3 -->
+      <!-- Venatus Market v3 -->
+<script>
+  (function() {
+    document.write('<div id="vmv3-ad-manager" style="display:none"></div>');
+    document
+      .getElementById("vmv3-ad-manager")
+      .innerHTML = '<iframe id="vmv3-frm" src="javascript:\'<html><body></body></html>\'" width="0" height="0" data-mode="scan" data-site-id="5b608a2046e0fb0001330d9b"></iframe>';
+    var loaderFrame = document.getElementById("vmv3-frm");
+    var loaderFrameWindow = loaderFrame.contentWindow ? loaderFrame.contentWindow : loaderFrame.contentDocument;
+    loaderFrameWindow.document.open();
+    loaderFrameWindow.document.write('<scr' + 'ipt src="https://hb.vntsm.com/v3/live/ad-manager.min.js" type="text/javascript" async>' + '</scr' + 'ipt>');
+    loaderFrameWindow.document.close();
+  })();
+</script>
+<!-- / Venatus Market v3 -->
+
+<script>
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-98194944-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  /**
+   * Function that tracks a click on an outbound link in Analytics.
+   * This function takes a valid URL string as an argument, and uses that URL string
+   * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+   * using 'navigator.sendBeacon' in browser that support it.
+   */
+  var trackOutboundLink = function(url) {
+    ga('send', 'event', 'outbound', 'click', url, {
+      'transport': 'beacon',
+      'hitCallback': function() {
+        document.location = url;
+      }
+    });
+  };
+  var trackCampaignImpression = function(name, location) {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: "campaign-" + name,
+      eventAction: 'impression',
+      eventLabel: (window.location.href === undefined ? "unknown" : window.location.href)
+    });
+  };
+  var trackCampaignBotPageImpression = function(name) {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: "campaign-" + name,
+      eventAction: 'botPageImpression',
+      eventLabel: (window.location.href === undefined ? "unknown" : window.location.href)
+    });
+  };
+  var trackCampaignServerInvite = function(name) {
+
+    ga('send', {
+      hitType: 'event',
+      eventCategory: "campaign-" + name,
+      eventAction: 'serverInvite',
+      eventLabel: (window.location.href === undefined ? "unknown" : window.location.href)
+    });
+  };
+  var trackCampaignWebClick = function(name, label) {
+    if (label === undefined) {
+      label = (window.location.href === undefined ? "unknown" : window.location.href);
+    }
+
+    ga('send', {
+      hitType: 'event',
+      eventCategory: "campaign-" + name,
+      eventAction: 'webClick',
+      eventLabel: (window.location.href === undefined ? "unknown" : window.location.href)
+    });
+  };
+  var trackRegularServerInvite = function(name) {
+
+    ga('send', {
+      hitType: 'event',
+      eventCategory: "organic-" + name,
+      eventAction: 'serverInvite',
+      eventLabel: (window.location.href === undefined ? "unknown" : window.location.href)
+    });
+  };
+  var trackRegularWebClick = function(name, label) {
+    if (label === undefined) {
+      label = (window.location.href === undefined ? "unknown" : window.location.href);
+    }
+
+
+    ga('send', {
+      hitType: 'event',
+      eventCategory: "organic-" + name,
+      eventAction: 'webClick',
+      eventLabel: label
+    });
+  }
+  var trackRegularBotPageImpression = function(name) {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: "organic-" + name,
+      eventAction: 'botPageImpression',
+      eventLabel: (window.location.href === undefined ? "unknown" : window.location.href)
+    });
+  };
+  var trackUpvote = function(id, label) {
+    if (label === undefined) {
+      label = (window.location.href === undefined ? "unknown" : window.location.href);
+    }
+
+    ga('send', {
+      hitType: 'event',
+      eventCategory: "upvote",
+      eventAction: id,
+      eventLabel: label
+    });
+  }
+
+  var myConfObj = {
+    iframeMouseOver: false
+  }
+  window.addEventListener('blur', function() {
+    if (myConfObj.iframeMouseOver) {
+      if (window.campaign === undefined) {
+        trackRegularWebClick(window.botName, 'iframe');
+      } else {
+        trackCampaignWebClick(window.campaign, 'iframe');
+      }
+    }
+  });
+
+  if (document.getElementById('botiframe')) {
+    document.getElementById('botiframe')
+      .addEventListener('mouseover', function() {
+        myConfObj.iframeMouseOver = true;
+      });
+    document.getElementById('botiframe')
+      .addEventListener('mouseout', function() {
+        myConfObj.iframeMouseOver = false;
+      });
+  }
+
+  var setCampaignIframe = function(campaign) {
+    window.campaign = campaign;
+  }
+
+  var setRegularIframe = function(botName) {
+    window.botName = botName;
+  }
+</script>
+
+
+<script>
+  var outlinkDuplicate = function(id) {
+    document.getElementById(id)
+      .click();
+  }
+</script>
+
+      
+      
+      <script type="text/javascript">
+        window['nitroAds'] = window['nitroAds'] || { createAd: function () { window.nitroAds.queue.push(["createAd", arguments]) }, queue: [] };
+      </script>
+      
+      <script async src="https://s.nitropay.com/ads-577.js"></script>
+      <script src="https://js.braintreegateway.com/web/dropin/1.24.0/js/dropin.min.js"></script>
+      <script src="https://top.gg/js/voting.js?5"></script>
+      <script src="https://top.gg/js/doubleclick.js"></script>
+</head>
+
+<body>
+  <div class="shapes-background shapes-1"></div>
+  <section class="page" id="bot-details-page">
+    <article class="wrapper-page">
+      <nav class="is-widescreen is-mobile site-nav"  id="menu">
+  <input type="checkbox" id="show-menu">
+  <label id="menu-trigger" for="show-menu">
+    <span class="menu-bar menu-bar-1 white"></span>
+    <span class="menu-bar menu-bar-2 white"></span>
+    <span class="menu-bar menu-bar-3 white"></span>
+  </label>
+  <div class="menu container">
+    <!-- empty span exists because some code checks for elements to be present to determine to pop up login or not -->
+    <ul>
+      <li><a href="https://top.gg/"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzNyIgdmlld0JveD0iMCAwIDMwIDM3Ij4KICAgIDxnIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTIyLjAxIDcuODg2VjUuNDUyYy45Ny0uNTExIDEuNDc4LTEuNDYgMS40NzgtMi41MzFDMjMuNDg4IDEuMzE0IDIyLjE4IDAgMjAuNTgxIDBjLTEuNTk4IDAtMi45MDYgMS4zMTQtMi45MDYgMi45MiAwIDEuMDcxLjQ2IDEuOTk2IDEuNDI5IDIuNTA3djIuNDU5aC04LjcyVjUuNDI3YTIuOTI3IDIuOTI3IDAgMCAwIDEuNDMtMi41MDZDMTEuODEzIDEuMzE0IDEwLjUwNCAwIDguOTA2IDAgNy4zMDggMCA2IDEuMzE0IDYgMi45MmEyLjkgMi45IDAgMCAwIDEuNDc4IDIuNTMydjIuNDM0SDIyLjAxeiIvPgogICAgICAgIDxwYXRoIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTI2LjM4OSAxMGMxLjk0NCAwIDMuNTE4IDEuNTYzIDMuNjExIDMuNDAxVjM3bC0zLjYxMS0zLjg2SDMuNTE5QzEuNTc0IDMzLjE0IDAgMzEuNjY4IDAgMjkuNzM3VjEzLjQwMUMwIDExLjU2MyAxLjU3NCAxMCAzLjUxOSAxMGgyMi44N3pNMTEuNSAxOGgtM2MtLjgyNSAwLTEuNS42NzUtMS41IDEuNXYzYzAgLjgyNS42NzUgMS41IDEuNSAxLjVoM2MuODI1IDAgMS41LS42NzUgMS41LTEuNXYtM2MwLS44MjUtLjY3NS0xLjUtMS41LTEuNXptMTAgMGgtM2MtLjgyNSAwLTEuNS42NzUtMS41IDEuNXYzYzAgLjgyNS42NzUgMS41IDEuNSAxLjVoM2MuODI1IDAgMS41LS42NzUgMS41LTEuNXYtM2MwLS44MjUtLjY3NS0xLjUtMS41LTEuNXoiLz4KICAgIDwvZz4KPC9zdmc+Cg==" alt="Discord Bots" title="Discord Bots"></a></li>
+      <li><a href="https://top.gg/tags">Find More Bots</a></li>
+        
+      <li><span></span></li>
+        
+    </ul>
+  </div>
+</nav>
+
+        <div style="margin-top: 2rem;"></div>
+        <div class="modal is-active" id="upvotenologin">
+          <div class="modal-background"
+            onclick="closeModal(this)"></div>
+          <div class="modal-content">
+            <p>
+              You must be logged in to upvote bots!
+              <a href="https://top.gg/login?redir=%2Fbot%2F731573262659747920%2Fvote">
+                <strong>Login</strong>
+              </a>
+            </p>
+            <button
+              class="button colorr is-primary"
+              onClick="closeModal(this.parentNode)">
+              Close
+            </button>
+          </div>
+        </div>
+        <div class="container content is-widescreen">
+          <div class="contentvoting">
+            <div id="totalContent center">
+              <div class="votingbotpp">
+                <img src="https://images.discordapp.net/avatars/731573262659747920/16e236b4ab69c5ef547cc1828b57c226.png?size=512">
+              </div>
+              <h2 id="entity-title" class="bottitle">Thunderstruck</h2>
+                
+                <div id="video-root">
+  <div style="max-width: 640px; margin: 0 auto;">
+    <div id="ad-video-skippable"></div>
+  </div>
+  <p class="mt-3">You will be able to vote after this ad.</p>
+</div>
+<script type="text/javascript">
+  window['nitroAds'].createAd('ad-video-skippable', {
+    'format': 'video-ac'
+    
+    
+  });
+</script>
+
+                
+                <div id="vote-root"
+                     data-is-premium=""
+                
+                  style="display: none;"
+                >
+                <div id="adblock-message"
+                  class="message is-danger centered"
+                  style="display: none; margin: 2rem auto; max-width: 640px;">
+                  <div class="message-body">
+                    We noticed you're using an AdBlock, ads help us fund the
+                    website and create growth for our creators. While we
+                    understand ads are not great. Consider turning it off.
+                  </div>
+                </div>
+                <span id="votingvotes">You can vote every 12 hours.</span>
+                <div id="vote-button-container">
+                  <span id="votingvoted"
+                    class="voting btn btn-orange btn-4x"
+                    onclick="voting.upvote('731573262659747920', this, '', '6LeA8rQUAAAAAFURdAirufNUOk5nU8nIJklS1MP4', '/api/vote')">
+                    Vote
+                  </span>
+                </div>
+                  <div>
+                    <span id="unsub" class="voting btn" onclick="voting.unsub('731573262659747920')" style="display: none;">
+                      Unsubscribe from reminders
+                    </span>
+                  </div>
+                <div class="reminder" id="reminder" style="display: none;">
+                  <h2>Thanks for voting!</h2>
+                  <p>Should we remind you when you can vote for this bot again?</p>
+                  <span id="votingvoted"
+                    class="btn btn-orange btn-2x"
+                    onclick="voting.remindMe('731573262659747920')">
+                    Yes, remind me
+                  </span>
+                  <div>
+                    <input type="checkbox" id="rememberReminder">
+                    Remind me everyday
+                  </div>
+                </div>
+
+                <div class="successful-reminder" id="successful-reminder" style="display: none;">
+                  <h2>Thanks for voting!</h2>
+                  <p>Awesome! We'll remind you when you can vote for this bot again :)</p>
+                </div>
+
+                <div class="failure-reminder" id="failure-reminder" style="display: none;">
+                  <h2>Thanks for voting!</h2>
+                  <p>
+                    Uh oh! We think you might have blocked browser notifications for our site, enable
+                    them and try again.
+                  </p>
+                </div>
+              </div>
+
+              <div class="successful-reminder" id="successful-reminder" style="display: none;">
+                <h2>Thanks for voting!</h2>
+                <p>Awesome! We'll remind you when you can vote for this bot again :)</p>
+              </div>
+
+              <div class="failure-reminder" id="failure-reminder" style="display: none;">
+                <h2>Thanks for voting!</h2>
+                <p>Uh oh! We think you might have blocked browser notifications for our site, enable them and try again.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="exploremorebots" style="margin-top: 30px;">
+        <a href="https://top.gg/bot/731573262659747920">
+          <button class="tagbutton">
+            Back to Thunderstruck
+          </button>
+        </a>
+    </article>
+  </section>
+  
+  <footer class="container">
+    <div class="centered">
+        <div class="footer-navigation">
+            <div class="footer-links-holder">
+                <h3 class="footer-header">CONTACT</h3>
+                <ul class="footer-links">
+                    <li><p><a href="https://top.gg/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c2b1b7b2b2adb0b682b6adb2eca5a5">[email&#160;protected]</a></p></li>
+                    <li><p>+1 (831) 709-9211</p></li>
+                </ul>
+            </div>
+            <div class="footer-links-holder">
+                <h3 class="footer-header">IMPORTANT LINKS</h3>
+                <ul class="footer-links">
+                    <li><a href="https://top.gg/terms">Terms of Service & Privacy</a></li>
+                    <li><a href="https://top.gg/api/docs">API Docs</a></li>
+                    <li><a href="https://medium.com/discord-bots">Blog</a></li>
+                    <li><a href="https://top.gg/advertise">Advertise on DBots</a></li>
+                    <li><a href="https://medium.com/discord-bots/making-a-basic-discord-bot-with-java-834949008c2b"
+                           id="howToMakeDiscordBot">How To Make A Discord Bot</a></li>
+                    <li><a href="https://top.gg">Top.gg</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-links-holder">
+                <h3 class="footer-header">PARTNERS</h3>
+                <ul class="footer-links">
+                    <li><a href="https://medal.tv">Medal</a></li>
+                    <li><a href="https://minecraftservers.biz">MinecraftServers.biz</a></li>
+                    <li><a href="https://www.gameserverkings.com">GameserverKings</a></li>
+                    <li><a href="https://megacool.co">Megacool</a></li>
+                    <li><a href="https://blog.medal.tv/">Medal Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-holder">
+                <h3 class="footer-header">EXTRAS</h3>
+                <ul class="footer-links">
+                    <li>
+            <span class="theme-switch-parent " onclick="enableDarkTheme(this)"
+            
+            >
+              <span>Dark Theme</span>
+              <label class="dThemeSwitch ">
+                <input id="darkThemeEnabler" type="checkbox"
+                
+                
+                >
+
+                <span class="slider round"></span>
+              </label>
+            </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+        <script data-cfasync="false" src="https://top.gg/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+          const darkModeIdentifier = 'dark';
+          const lightModeIdentifier = 'light';
+          const doc = document.documentElement;
+
+          function addDTToHeader() {
+            let theme_node = document.createElement('LINK');
+            theme_node.setAttribute('rel', 'stylesheet');
+            theme_node.setAttribute('id', 'dtssheet');
+            theme_node.setAttribute('href', '/stylesheets/darktheme.css');
+            document.querySelector('head')
+              .appendChild(theme_node);
+          }
+
+          let cb = document.getElementById('darkThemeEnabler');
+
+          function enableDarkTheme() {
+            if (cb.checked) {
+              doc.dataset.theme = lightModeIdentifier;
+              setTheme(lightModeIdentifier);
+              localStorage.setItem('dark', 'false');
+              if (document.getElementById('dtssheet')) {
+                document.querySelector('head')
+                  .removeChild(document.getElementById('dtssheet'));
+              }
+              cb.checked = false;
+            } else {
+              doc.dataset.theme = darkModeIdentifier;
+              setTheme(darkModeIdentifier);
+              cb.checked = true;
+              localStorage.setItem('dark', 'true');
+              addDTToHeader();
+            }
+          }
+
+          if (localStorage.getItem('dark') === 'true') {
+            doc.dataset.theme = darkModeIdentifier;
+            setTheme(darkModeIdentifier);
+            cb.checked = true;
+            addDTToHeader();
+          } else {
+            doc.dataset.theme = lightModeIdentifier;
+            setTheme(lightModeIdentifier);
+            cb.checked = false;
+          }
+        </script>
+    
+</footer>
+
+</body>
+</html>
+
+<script>
+  voting.init('731573262659747920');
+  function closeModal(el) {
+    el.parentNode.classList.remove('is-active');
+  }
+</script>

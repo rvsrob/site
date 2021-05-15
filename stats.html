@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html style="background-color: #F5F5F5;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="Discord, Discord bots, Discord bot, Thunderstruck">
+    <meta name="author" content="Thunder">
+    <title>Thunderstruck - Stats</title>
+    <link rel="icon" href="dashboard/public/images/loho.png">
+    <link rel="stylesheet" href="dashboard/public/css/bulma.css">
+    <link rel="stylesheet" href="dashboard/public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dashboard/public/css/main.css">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://thunderstruck.gg/dashboard/public/images/loho.png">
+    <meta property="og:image:secure_url" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <style>
+        /* @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        body {
+            font-family: monospace;
+        } */
+
+        .main {
+            margin: 1em 6em 1em 6em;
+        }
+
+        @media screen and (max-width: 1450px) {
+            .main {
+                margin: 1em 1em 1em 1em;
+            }
+        }
+
+        ::-webkit-scrollbar { width: 10px; }
+		::-webkit-scrollbar-track { background: #33cccc; }
+		::-webkit-scrollbar-thumb { background: #33cccc; }
+		::-webkit-scrollbar-thumb:hover { background: #33cccc; }
+
+        table tr:first-child th:first-child {
+            width: 20%;
+        }
+
+        .tabcontent {
+            display: none;
+        }
+
+        .tag {
+            border-radius: 0px !important;
+            margin-left: 5px !important;
+        }
+
+        .card-content-command {
+            padding: 0.5rem !important;
+            font-size: 0.8em;
+        }
+
+        .card-command {
+            margin-bottom: 0.5em;
+        }
+
+        .card-header-title {
+            padding: 0.5rem !important;
+        }
+
+        .card-header-icon {
+            padding: 0.5rem !important;
+        }
+
+        .overflowtext {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .pulse {
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ff0000;
+            cursor: pointer;
+            box-shadow: 0 0 0 rgba(204, 44, 44, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        .pulse:hover {
+            animation: none;
+        }
+
+        @media screen and (max-width: 770px) {
+            .tag-mobile {
+                display: none !important;
+            }
+        }
+
+        @-webkit-keyframes pulse {
+            0% {
+                -webkit-box-shadow: 0 0 0 0 rgba(204, 44, 44, 0.4);
+            }
+
+            70% {
+                -webkit-box-shadow: 0 0 0 10px rgba(204, 44, 44, 0);
+            }
+
+            100% {
+                -webkit-box-shadow: 0 0 0 0 rgba(204, 44, 44, 0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                -moz-box-shadow: 0 0 0 0 rgba(204, 44, 44, 0.4);
+                box-shadow: 0 0 0 0 rgba(204, 44, 44, 0.4);
+            }
+
+            70% {
+                -moz-box-shadow: 0 0 0 10px rgba(204, 44, 44, 0);
+                box-shadow: 0 0 0 10px rgba(204, 44, 44, 0);
+            }
+
+            100% {
+                -moz-box-shadow: 0 0 0 0 rgba(204, 44, 44, 0);
+                box-shadow: 0 0 0 0 rgba(204, 44, 44, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero-head hero is-info" style="background-color: #33cccc;">
+        <header class="nav">
+            <div class="container">
+                <a class="nav-item" href='index.html'>
+                    <img src="dashboard/public/images/hi.png" class="hideme" style="width: 8em;">
+                </a>
+                <div class="nav-right">
+                    <a href="index.html" class="nav-item">
+                        Home
+                    </a>
+                    <a href="commands.html" class="nav-item ">
+                        Commands
+                    </a>
+                    <a href="stats.html" class="nav-item is-active">
+                        Stats
+                    </a>
+                    <a href="vote.html" class="nav-item">
+                        Vote
+                    </a>
+                    <a href="privacy.html" class="nav-item">
+                        Privacy Policy
+                    </a>
+                    <a href="https://thunderstruck.gg/support" class="nav-item">
+                        Support Server
+                    </a>
+                    <a href="invite.html" class="nav-item">
+                        <span>Invite</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="main">
+
+
+    </div>
+    <br>
+    <br>
+    </div>
+    <script>
+        function show(evt, command) {
+
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(command).style.display = "block";
+            evt.currentTarget.className += " is-active";
+        }
+    </script>
+    </div>
+</body>
+
+</html>

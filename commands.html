@@ -1,0 +1,3820 @@
+<!DOCTYPE html>
+<html style="background-color: #F5F5F5;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="Discord, Discord bots, Discord bot, Thunderstruck">
+    <meta name="author" content="Thunder">
+    <title>Thunderstruck - Commands</title>
+    <link rel="icon" href="dashboard/public/images/loho.png">
+    <link rel="stylesheet" href="dashboard/public/css/bulma.css">
+    <link rel="stylesheet" href="dashboard/public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dashboard/public/css/main.css">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://thunderstruck.gg/dashboard/public/images/loho.png">
+    <meta property="og:image:secure_url" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <style>
+        /* @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        body {
+            font-family: monospace;
+        } */
+
+        .main {
+            margin: 1em 6em 1em 6em;
+        }
+
+        @media screen and (max-width: 1450px) {
+            .main {
+                margin: 1em 1em 1em 1em;
+            }
+        }
+
+        ::-webkit-scrollbar { width: 10px; }
+		::-webkit-scrollbar-track { background: #33cccc; }
+		::-webkit-scrollbar-thumb { background: #33cccc; }
+		::-webkit-scrollbar-thumb:hover { background: #33cccc; }
+
+        table tr:first-child th:first-child {
+            width: 20%;
+        }
+
+        .tabcontent {
+            display: none;
+        }
+
+        .tag {
+            border-radius: 0px !important;
+            margin-left: 5px !important;
+        }
+
+        .card-content-command {
+            padding: 0.5rem !important;
+            font-size: 0.8em;
+        }
+
+        .card-command {
+            margin-bottom: 0.5em;
+        }
+
+        .card-header-title {
+            padding: 0.5rem !important;
+        }
+
+        .card-header-icon {
+            padding: 0.5rem !important;
+        }
+
+        .overflowtext {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .pulse {
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ff0000;
+            cursor: pointer;
+            box-shadow: 0 0 0 rgba(204, 44, 44, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        .pulse:hover {
+            animation: none;
+        }
+
+        @media screen and (max-width: 770px) {
+            .tag-mobile {
+                display: none !important;
+            }
+        }
+
+        @-webkit-keyframes pulse {
+            0% {
+                -webkit-box-shadow: 0 0 0 0 rgba(204, 44, 44, 0.4);
+            }
+
+            70% {
+                -webkit-box-shadow: 0 0 0 10px rgba(204, 44, 44, 0);
+            }
+
+            100% {
+                -webkit-box-shadow: 0 0 0 0 rgba(204, 44, 44, 0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                -moz-box-shadow: 0 0 0 0 rgba(204, 44, 44, 0.4);
+                box-shadow: 0 0 0 0 rgba(204, 44, 44, 0.4);
+            }
+
+            70% {
+                -moz-box-shadow: 0 0 0 10px rgba(204, 44, 44, 0);
+                box-shadow: 0 0 0 10px rgba(204, 44, 44, 0);
+            }
+
+            100% {
+                -moz-box-shadow: 0 0 0 0 rgba(204, 44, 44, 0);
+                box-shadow: 0 0 0 0 rgba(204, 44, 44, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero-head hero is-info" style="background-color: #33cccc;">
+        <header class="nav">
+            <div class="container">
+                <a class="nav-item" href='index.html'>
+                    <img src="dashboard/public/images/hi.png" class="hideme" style="width: 8em;">
+                </a>
+                <div class="nav-right">
+                    <a href="index.html" class="nav-item">
+                        Home
+                    </a>
+                    <a href="commands.html" class="nav-item is-active">
+                        Commands
+                    </a>
+                    <a href="stats.html" class="nav-item">
+                        Stats
+                    </a>
+                    <a href="privacy.html" class="nav-item">
+                        Privacy Policy
+                    </a>
+                    <a href="vote.html" class="nav-item">
+                        Vote
+                    </a>
+                    <a href="https://thunderstruck.gg/support" class="nav-item">
+                        Support Server
+                    </a>
+                    <a href="invite.html" class="nav-item">
+                        <span>Invite</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="main">
+        <div style="margin:50px;" class="has-text-centered">                        
+                    </div>
+                    
+                    
+                    <table class="table table-striped table-hover" align="center">
+                        <p class="title is-2 has-text-centered"> Administration Commands</p>
+                        <div class="subtitle  is-6 has-text-centered">                            
+                            <br>
+                          
+                        <thead>
+                            <tr>
+                                <th scope="col has-text-centered">Command Name</th>
+                                <th scope="col has-text-centered">Aliases</th>
+                                <th scope="col has-text-centered">Description</th>
+                                <th scope="col has-text-centered">Cooldown Period</th>
+                                <th scope="col has-text-centered">Enabled</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    leave
+                                    
+                            
+                                </td>
+                                <td>
+                                    l | leav | leavechannel
+                                </td>
+                                <td>
+                                    Enable or Disable Leave Message
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    logs
+                                    
+                            
+                                </td>
+                                <td>
+                                    log | guildlog
+                                </td>
+                                <td>
+                                    Enable or Disable Guild Logs
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    nuke
+                                    
+                            
+                                </td>
+                                <td>
+                                    nukechannel
+                                </td>
+                                <td>
+                                    Nuke the channel.
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    prefix
+                                    
+                            
+                                </td>
+                                <td>
+                                    prefix | guildprefix
+                                </td>
+                                <td>
+                                    Set Guild Prefix
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    welcome
+                                    
+                            
+                                </td>
+                                <td>
+                                    w | wel | wjoin
+                                </td>
+                                <td>
+                                    Enable or Disable Welcome Logs
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <table class="table table-striped table-hover" align="center">
+                        <p class="title is-2 has-text-centered"> Fun Commands</p>
+                        <div class="subtitle  is-6 has-text-centered">                            
+                            <br>
+                          
+                        <thead>
+                            <tr>
+                                <th scope="col has-text-centered">Command Name</th>
+                                <th scope="col has-text-centered">Aliases</th>
+                                <th scope="col has-text-centered">Description</th>
+                                <th scope="col has-text-centered">Cooldown Period</th>
+                                <th scope="col has-text-centered">Enabled</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    coinflip
+                                    
+                            
+                                </td>
+                                <td>
+                                    cointoss | coin | flip
+                                </td>
+                                <td>
+                                    Flip that table then unflip!
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    dadjoke
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Tells you dad joke
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    emojitext
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Display a message in emojis
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    enlarge
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Get your emoji enlarged.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    fidgetspinner
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Spins a fidget spinner for you and shows for how long it was spinning.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    fullflip
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Flip that table then unflip!
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    gif
+                                    
+                            
+                                </td>
+                                <td>
+                                     |  |  | 
+                                </td>
+                                <td>
+                                    Send a gif
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    hack
+                                    
+                            
+                                </td>
+                                <td>
+                                    hackme |  |  | 
+                                </td>
+                                <td>
+                                    *Fake* Hacks a user
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    insult
+                                    
+                            
+                                </td>
+                                <td>
+                                    evilinsult
+                                </td>
+                                <td>
+                                    Sends a random evil insult.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    memes
+                                    
+                            
+                                </td>
+                                <td>
+                                    meme
+                                </td>
+                                <td>
+                                    Post a random meme.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    penis
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    User Penis length identifier 1000
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    rate
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Rate a user
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    reversemsg
+                                    
+                            
+                                </td>
+                                <td>
+                                    reversemessage
+                                </td>
+                                <td>
+                                    Reverse A Message!
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    tableflip
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Flip that table!
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    unflip
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Unflip that table!
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <table class="table table-striped table-hover" align="center">
+                        <p class="title is-2 has-text-centered"> Games Commands</p>
+                        <div class="subtitle  is-6 has-text-centered">                            
+                            <br>
+                          
+                        <thead>
+                            <tr>
+                                <th scope="col has-text-centered">Command Name</th>
+                                <th scope="col has-text-centered">Aliases</th>
+                                <th scope="col has-text-centered">Description</th>
+                                <th scope="col has-text-centered">Cooldown Period</th>
+                                <th scope="col has-text-centered">Enabled</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    clashofclans
+                                    
+                            
+                                </td>
+                                <td>
+                                    coc
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <table class="table table-striped table-hover" align="center">
+                        <p class="title is-2 has-text-centered"> General Commands</p>
+                        <div class="subtitle  is-6 has-text-centered">                            
+                            <br>
+                          
+                        <thead>
+                            <tr>
+                                <th scope="col has-text-centered">Command Name</th>
+                                <th scope="col has-text-centered">Aliases</th>
+                                <th scope="col has-text-centered">Description</th>
+                                <th scope="col has-text-centered">Cooldown Period</th>
+                                <th scope="col has-text-centered">Enabled</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    afk
+                                    
+                            
+                                </td>
+                                <td>
+                                    afk | away
+                                </td>
+                                <td>
+                                    Displays that you are AFK.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    avatar
+                                    
+                            
+                                </td>
+                                <td>
+                                    avatar | pfp | profilepic
+                                </td>
+                                <td>
+                                    Obtain the a user&#39;s profile picture.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    botinfo
+                                    
+                            
+                                </td>
+                                <td>
+                                    bi | stats | bs | botstats | s | botinfo
+                                </td>
+                                <td>
+                                    Get out my stats, it&#39;s pretty cool
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    device
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Tells you which devices a user is on.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    devinfo
+                                    
+                            
+                                </td>
+                                <td>
+                                    devi | di
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    donate
+                                    
+                            
+                                </td>
+                                <td>
+                                     | 
+                                </td>
+                                <td>
+                                    Gives you the option to donate toward our hosting.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    embed
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    help
+                                    
+                            
+                                </td>
+                                <td>
+                                    h | helpme | cmdinfo
+                                </td>
+                                <td>
+                                    Help command to show the commands
+                                </td>
+                                <td>
+                                    <p>6 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    invite
+                                    
+                            
+                                </td>
+                                <td>
+                                    invme | invlink | inviteme | inv
+                                </td>
+                                <td>
+                                    Invite Bot Link!
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    latency
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    perms
+                                    
+                            
+                                </td>
+                                <td>
+                                    userperms | uperms
+                                </td>
+                                <td>
+                                    Gives you the user permissions for the guild.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    ping
+                                    
+                            
+                                </td>
+                                <td>
+                                    pinginfo | bping | bpi | botping
+                                </td>
+                                <td>
+                                    Find out information about the Ping
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    privacy
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Links the privacy policy
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    reportbug
+                                    
+                            
+                                </td>
+                                <td>
+                                    bugreport
+                                </td>
+                                <td>
+                                    Report a bug to the developer.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    say
+                                    
+                            
+                                </td>
+                                <td>
+                                    talk | speak
+                                </td>
+                                <td>
+                                    Say something with the bot.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    snipe
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Get a snipe of your choice in the channel!
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    staff
+                                    
+                            
+                                </td>
+                                <td>
+                                    team
+                                </td>
+                                <td>
+                                    Displays the staff team.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    suggest
+                                    
+                            
+                                </td>
+                                <td>
+                                    cmdsuggest
+                                </td>
+                                <td>
+                                    Suggest a command.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    support
+                                    
+                            
+                                </td>
+                                <td>
+                                    supportguild | supportlink
+                                </td>
+                                <td>
+                                    Gives you the support Guild Invite Link.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    uptime
+                                    
+                            
+                                </td>
+                                <td>
+                                    uptime | upt | botuptime
+                                </td>
+                                <td>
+                                    Bot Uptime
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    userid
+                                    
+                            
+                                </td>
+                                <td>
+                                    uid
+                                </td>
+                                <td>
+                                    Displays the user id.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    userinfo
+                                    
+                            
+                                </td>
+                                <td>
+                                    whois | ui | uinfo
+                                </td>
+                                <td>
+                                    Get out my stats, it&#39;s pretty cool
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    version
+                                    
+                            
+                                </td>
+                                <td>
+                                    ver
+                                </td>
+                                <td>
+                                    Displays the version of the bot
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    vote
+                                    
+                            
+                                </td>
+                                <td>
+                                    vote
+                                </td>
+                                <td>
+                                    Vote for our bot!
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <table class="table table-striped table-hover" align="center">
+                        <p class="title is-2 has-text-centered"> Guild Commands</p>
+                        <div class="subtitle  is-6 has-text-centered">                            
+                            <br>
+                          
+                        <thead>
+                            <tr>
+                                <th scope="col has-text-centered">Command Name</th>
+                                <th scope="col has-text-centered">Aliases</th>
+                                <th scope="col has-text-centered">Description</th>
+                                <th scope="col has-text-centered">Cooldown Period</th>
+                                <th scope="col has-text-centered">Enabled</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    boostinfo
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Get information about the server boosts.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    channelid
+                                    
+                            
+                                </td>
+                                <td>
+                                    cid
+                                </td>
+                                <td>
+                                    Displays the channel id.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    channelinfo
+                                    
+                            
+                                </td>
+                                <td>
+                                    cinfo | chaninfo | ci
+                                </td>
+                                <td>
+                                    Find out information about the channel
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    guildfeatures
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Displays the guild features.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    guildicon
+                                    
+                            
+                                </td>
+                                <td>
+                                    servericon | gicon | sicon
+                                </td>
+                                <td>
+                                    Displays the guild icon.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    guildid
+                                    
+                            
+                                </td>
+                                <td>
+                                    serverid | gid | sid
+                                </td>
+                                <td>
+                                    Displays the guild id.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    guildinfo
+                                    
+                            
+                                </td>
+                                <td>
+                                    serverinfo | ginfo | sinfo | gi | si
+                                </td>
+                                <td>
+                                    Displays the guild info.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    guildowner
+                                    
+                            
+                                </td>
+                                <td>
+                                    guildowner | serverowner
+                                </td>
+                                <td>
+                                    Displays the guild owner.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    invitelist
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Displays invite list.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    memberscount
+                                    
+                            
+                                </td>
+                                <td>
+                                    mcount
+                                </td>
+                                <td>
+                                    Displays total of members!
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    roles
+                                    
+                            
+                                </td>
+                                <td>
+                                    groles
+                                </td>
+                                <td>
+                                    Displays list of guild roles.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    rolesids
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Displays the roles and ids.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    rolesinfo
+                                    
+                            
+                                </td>
+                                <td>
+                                    ri
+                                </td>
+                                <td>
+                                    Displays roles info.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <table class="table table-striped table-hover" align="center">
+                        <p class="title is-2 has-text-centered"> Images Commands</p>
+                        <div class="subtitle  is-6 has-text-centered">                            
+                            <br>
+                          
+                        <thead>
+                            <tr>
+                                <th scope="col has-text-centered">Command Name</th>
+                                <th scope="col has-text-centered">Aliases</th>
+                                <th scope="col has-text-centered">Description</th>
+                                <th scope="col has-text-centered">Cooldown Period</th>
+                                <th scope="col has-text-centered">Enabled</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    3000years
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a 3000years picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    approved
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a approved picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    beautiful
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a beautiful picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    brazzers
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a brazzers picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    burn
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a burn picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    challenger
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a challenger picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    changemymind
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Make your own changemymind meme
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    clyde
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Make Clyde say something.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    contrast
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a contrast picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    crush
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a crush picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    deepfry
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a deepfry picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    dictator
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Make someone&#39;s a dictator.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    distort
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Make someone&#39;s a distort.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    fire
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a fire picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    gay
+                                    
+                            
+                                </td>
+                                <td>
+                                    gae
+                                </td>
+                                <td>
+                                    Sends a gay picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    glitch
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a glitch picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    jail
+                                    
+                            
+                                </td>
+                                <td>
+                                    prision
+                                </td>
+                                <td>
+                                    Sends a jail picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    missionpassed
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a missionpassed picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    pikachu
+                                    
+                            
+                                </td>
+                                <td>
+                                    pika
+                                </td>
+                                <td>
+                                    Gives you a random Pikachu image.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    pixelize
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Make someone&#39;s avatar pixelated.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    posterize
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a posterize picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    ps4
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a ps4 picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    rejected
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a rejected picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    rip
+                                    
+                            
+                                </td>
+                                <td>
+                                    restinpiece
+                                </td>
+                                <td>
+                                    Sends a rip picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    scary
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a scary picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    shit
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    You worthless piece of shit! (jk)
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    supreme
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a supreme picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    tobecontinued
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    To be continued...
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    triggered
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a triggered picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    trump
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Make trump tweet something.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    wanted
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a wanted picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    wasted
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends a wasted picture with your avatar in the background.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <table class="table table-striped table-hover" align="center">
+                        <p class="title is-2 has-text-centered"> Misc Commands</p>
+                        <div class="subtitle  is-6 has-text-centered">                            
+                            <br>
+                          
+                        <thead>
+                            <tr>
+                                <th scope="col has-text-centered">Command Name</th>
+                                <th scope="col has-text-centered">Aliases</th>
+                                <th scope="col has-text-centered">Description</th>
+                                <th scope="col has-text-centered">Cooldown Period</th>
+                                <th scope="col has-text-centered">Enabled</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    calculator
+                                    
+                            
+                                </td>
+                                <td>
+                                    calc
+                                </td>
+                                <td>
+                                    Basic Math Functions Calculator
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    screenshot
+                                    
+                            
+                                </td>
+                                <td>
+                                    webshot | capture | snap
+                                </td>
+                                <td>
+                                    Takes a screenshot of any webpage.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    wallpaper
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Get a ramdom wallpaper.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    worldclock
+                                    
+                            
+                                </td>
+                                <td>
+                                    timezones
+                                </td>
+                                <td>
+                                    Shows the time from other countries
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <table class="table table-striped table-hover" align="center">
+                        <p class="title is-2 has-text-centered"> Moderation Commands</p>
+                        <div class="subtitle  is-6 has-text-centered">                            
+                            <br>
+                          
+                        <thead>
+                            <tr>
+                                <th scope="col has-text-centered">Command Name</th>
+                                <th scope="col has-text-centered">Aliases</th>
+                                <th scope="col has-text-centered">Description</th>
+                                <th scope="col has-text-centered">Cooldown Period</th>
+                                <th scope="col has-text-centered">Enabled</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    ban
+                                    
+                            
+                                </td>
+                                <td>
+                                    banuser
+                                </td>
+                                <td>
+                                    Ban a user from the server!
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    banlist
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Show the banned list of users.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    giverole
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Gives roles from members.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    kick
+                                    
+                            
+                                </td>
+                                <td>
+                                    kickuser
+                                </td>
+                                <td>
+                                    Kick a user from the server!
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    mute
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    The One &amp; Only True Mute Command *Even Dyno Doesn&#39;t Have This!*
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    nickname
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Set Members nickname.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    purge
+                                    
+                            
+                                </td>
+                                <td>
+                                    prune | clear | deletemsg | bulkdelete
+                                </td>
+                                <td>
+                                    Purges a number of messages.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    removerole
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Remove roles from members.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    slowmode
+                                    
+                            
+                                </td>
+                                <td>
+                                    smode
+                                </td>
+                                <td>
+                                    Set the slowmode for a specific channel.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    softban
+                                    
+                            
+                                </td>
+                                <td>
+                                    softbanuser
+                                </td>
+                                <td>
+                                    Softban a user from the server!
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    unban
+                                    
+                            
+                                </td>
+                                <td>
+                                    unbanuser
+                                </td>
+                                <td>
+                                    Unban a user from the server!
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <table class="table table-striped table-hover" align="center">
+                        <p class="title is-2 has-text-centered"> Music Commands</p>
+                        <div class="subtitle  is-6 has-text-centered">                            
+                            <br>
+                          
+                        <thead>
+                            <tr>
+                                <th scope="col has-text-centered">Command Name</th>
+                                <th scope="col has-text-centered">Aliases</th>
+                                <th scope="col has-text-centered">Description</th>
+                                <th scope="col has-text-centered">Cooldown Period</th>
+                                <th scope="col has-text-centered">Enabled</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    bassboost
+                                    
+                            
+                                </td>
+                                <td>
+                                    bb | boost
+                                </td>
+                                <td>
+                                    Set a level of bassboost based on four different levels.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    loop
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Loops your songs easily!
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    nowplaying
+                                    
+                            
+                                </td>
+                                <td>
+                                    np | songnow | currentsong
+                                </td>
+                                <td>
+                                    What song is playing.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    pause
+                                    
+                            
+                                </td>
+                                <td>
+                                    tempstop | pause | musicpause
+                                </td>
+                                <td>
+                                    Pause the song in voicechannel.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    play
+                                    
+                            
+                                </td>
+                                <td>
+                                    join | play | song
+                                </td>
+                                <td>
+                                    Plays music on random selection via name given.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    playback
+                                    
+                            
+                                </td>
+                                <td>
+                                    pb | pbn | notif | ntf | n
+                                </td>
+                                <td>
+                                    Enable and disable playback notifications
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    queue
+                                    
+                            
+                                </td>
+                                <td>
+                                    list | musiclist | songlist | q
+                                </td>
+                                <td>
+                                    Lists all songs in queue.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    resume
+                                    
+                            
+                                </td>
+                                <td>
+                                    start | continue
+                                </td>
+                                <td>
+                                    Resumes song playing.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    search
+                                    
+                            
+                                </td>
+                                <td>
+                                    find | lookup | ytsearch | ytp
+                                </td>
+                                <td>
+                                    Search for specific song by title/name etc.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    seek
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Fastforward or rewind a song.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    skip
+                                    
+                            
+                                </td>
+                                <td>
+                                    skip | next
+                                </td>
+                                <td>
+                                    Skip current song (requires 3 voters).
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    stop
+                                    
+                            
+                                </td>
+                                <td>
+                                    leave | bye | fuckoff
+                                </td>
+                                <td>
+                                    Does exactly by the name.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    volume
+                                    
+                            
+                                </td>
+                                <td>
+                                    vol | v | sound
+                                </td>
+                                <td>
+                                    Change the volume.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <table class="table table-striped table-hover" align="center">
+                        <p class="title is-2 has-text-centered"> NSFW Commands</p>
+                        <div class="subtitle  is-6 has-text-centered">                            
+                            <br>
+                          
+                        <thead>
+                            <tr>
+                                <th scope="col has-text-centered">Command Name</th>
+                                <th scope="col has-text-centered">Aliases</th>
+                                <th scope="col has-text-centered">Description</th>
+                                <th scope="col has-text-centered">Cooldown Period</th>
+                                <th scope="col has-text-centered">Enabled</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    4k
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Displays Random 4K Lewds
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    anal
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Displays Random Anal Lewds
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    ass
+                                    
+                            
+                                </td>
+                                <td>
+                                    ass | booty | backside
+                                </td>
+                                <td>
+                                    Displays Random Ass Lewds
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    boobs
+                                    
+                            
+                                </td>
+                                <td>
+                                    boobies | tits
+                                </td>
+                                <td>
+                                    Displays Random boobs Lewds
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    hentai
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Displays Random Hentai Lewds
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    porngifs
+                                    
+                            
+                                </td>
+                                <td>
+                                    porn-gif | pgif
+                                </td>
+                                <td>
+                                    Random porn gifs
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    pussy
+                                    
+                            
+                                </td>
+                                <td>
+                                    pussy | vagina | frontbutt
+                                </td>
+                                <td>
+                                    Displays Random Pussy Lewds
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    tentacle
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Displays Random Tentacle Lewds
+                                </td>
+                                <td>
+                                    <p>5 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <table class="table table-striped table-hover" align="center">
+                        <p class="title is-2 has-text-centered"> Roleplay Commands</p>
+                        <div class="subtitle  is-6 has-text-centered">                            
+                            <br>
+                          
+                        <thead>
+                            <tr>
+                                <th scope="col has-text-centered">Command Name</th>
+                                <th scope="col has-text-centered">Aliases</th>
+                                <th scope="col has-text-centered">Description</th>
+                                <th scope="col has-text-centered">Cooldown Period</th>
+                                <th scope="col has-text-centered">Enabled</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    cuddle
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Show affection towards others or the bot can show affection to you.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    hug
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Show affection towards others or the bot can show affection to you.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    kiss
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Show affection towards others or the bot can show affection to you.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    love
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Show affection towards others or the bot can show affection to you.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    pat
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Show affection towards others or the bot can show affection to you.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    poke
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Show affection towards others or the bot can show affection to you.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    slap
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Show affection towards others or the bot can show affection to you.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    spank
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Show affection towards others or the bot can show affection to you.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    tickle
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Show affection towards others or the bot can show affection to you.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <table class="table table-striped table-hover" align="center">
+                        <p class="title is-2 has-text-centered"> Search Commands</p>
+                        <div class="subtitle  is-6 has-text-centered">                            
+                            <br>
+                          
+                        <thead>
+                            <tr>
+                                <th scope="col has-text-centered">Command Name</th>
+                                <th scope="col has-text-centered">Aliases</th>
+                                <th scope="col has-text-centered">Description</th>
+                                <th scope="col has-text-centered">Cooldown Period</th>
+                                <th scope="col has-text-centered">Enabled</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    covid
+                                    
+                            
+                                </td>
+                                <td>
+                                    cov | cv19 | cov20 | corona
+                                </td>
+                                <td>
+                                    Keep up to date with the latest CoronaVirus Outbreak
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    djs
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Searches the Discord.JS documentation for the specified query.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    github
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Sends information of a GitHub repository
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    npm
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Get info about a specified npm package.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    pokemon
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Returns a pokemon information
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    stackoverflow
+                                    
+                            
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Searches Stack Overflow for your query
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    twitter
+                                    
+                            
+                                </td>
+                                <td>
+                                    twitterinfo
+                                </td>
+                                <td>
+                                    Too lazy to leave Discord to lookup a Twitter?
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    weather
+                                    
+                            
+                                </td>
+                                <td>
+                                    weatherinfo | weathersearch
+                                </td>
+                                <td>
+                                    Search for a domain subdomains!
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    websitestatus
+                                    
+                            
+                                </td>
+                                <td>
+                                    upordown
+                                </td>
+                                <td>
+                                    Show you if a website is online or offline.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    wiki
+                                    
+                            
+                                </td>
+                                <td>
+                                    wikipediasearch | wikipedia
+                                </td>
+                                <td>
+                                    Get info about a specified wiki.
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <table class="table table-striped table-hover" align="center">
+                        <p class="title is-2 has-text-centered"> Lookup Commands</p>
+                        <div class="subtitle  is-6 has-text-centered">                            
+                            <br>
+                          
+                        <thead>
+                            <tr>
+                                <th scope="col has-text-centered">Command Name</th>
+                                <th scope="col has-text-centered">Aliases</th>
+                                <th scope="col has-text-centered">Description</th>
+                                <th scope="col has-text-centered">Cooldown Period</th>
+                                <th scope="col has-text-centered">Enabled</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    
+                                    
+                                    imagesearch
+                                    
+                            
+                                </td>
+                                <td>
+                                    isearch | imagelookup
+                                </td>
+                                <td>
+                                    Lookup a Random Image from the web!
+                                </td>
+                                <td>
+                                    <p>2 seconds
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Yes</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                </div>
+                <br>
+                <br>
+            </div>
+            <script>
+                function show(evt, command) {
+
+                    // Declare all variables
+                    var i, tabcontent, tablinks;
+
+                    // Get all elements with class="tabcontent" and hide them
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+
+                    // Get all elements with class="tablinks" and remove the class "active"
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+                    }
+
+                    // Show the current tab, and add an "active" class to the button that opened the tab
+                    document.getElementById(command).style.display = "block";
+                    evt.currentTarget.className += " is-active";
+                }
+            </script>
+        </div>
+</body>
+
+</html>

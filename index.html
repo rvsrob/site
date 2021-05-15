@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html style="background-color: #eaeaea; overflow-y: auto;">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description"
+		content="">
+	<meta name="keywords" content="Discord, Discord bots, Discord bot, Thunderstruck">
+	<meta name="author" content="Thunder">
+	<link rel="icon" href="dashboard/public/images/loho.png">
+	<link rel="stylesheet" href="dashboard/public/css/bulma.css">
+	<link rel="stylesheet" href="dashboard/public/css/font-awesome.min.css">
+	<link rel="stylesheet" href="dashboard/public/css/main.css">
+	<meta property="og:url" content="/">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description"
+		content="">
+	<meta property="og:image" content="https://thunderstruck.gg/dashboard/public/images/loho.png">
+	<meta property="og:image:secure_url" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=0.8">
+	<style>
+		.status td {
+			text-align: center !important;
+			padding: 2px;
+		}
+
+		.status thead {
+			border-bottom: 1px solid #ddd;
+		}
+
+		.status th:first-child,
+		.status td:first-child {
+			font-weight: bolder;
+		}
+
+		.premium td {
+			text-align: center !important;
+			padding: 15px;
+		}
+
+		.premium th,
+		.premium td {
+			border-bottom: 1px solid #ddd;
+		}
+
+		.premium th:first-child,
+		.premium td:first-child {
+			font-weight: bolder;
+		}
+
+		::-webkit-scrollbar { width: 10px; }
+		::-webkit-scrollbar-track { background: #33cccc; }
+		::-webkit-scrollbar-thumb { background: #33cccc; }
+		::-webkit-scrollbar-thumb:hover { background: #33cccc; }        
+
+		#particle-js {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 50% 50%;
+			opacity: 0.48;
+		}
+
+		canvas {
+			position: fixed;
+		}
+
+		@media screen and (max-width: 770px) {
+			.hero-body {
+				padding: 0px !important;
+				padding-top: 3em !important;
+			}
+		}
+
+		.circle:before {
+			content: ' \25CF';
+			font-size: 16px;
+		}
+	</style>
+</head>
+
+<body>
+	<section class="hero is-info is-fullheight"
+		style="background-image: url('index.html'); background-size: cover; background-color: #33cccc;">
+		<!-- Hero header: will stick at the top -->
+		<div class="hero-head">
+			<header class="nav">
+				<div class="container">
+					<a class="nav-item" href='index.html'>
+						<img src="dashboard/public/images/hi.png" class="hideme" style="width: 8em;">
+					</a>
+					<div class="nav-right">
+												
+								<a href="index.html" class="nav-item is-active">
+									Home
+								</a>
+								<a href="commands.html" class="nav-item ">
+									Commands
+								</a>
+								<a href="stats.html" class="nav-item ">
+									Stats
+								</a>
+								<a href="privacy.html" class="nav-item">
+									Privacy Policy
+								</a>			
+								<a href="vote.html" class="nav-item">
+									Vote
+								</a>
+								<a href="https://thunderstruck.gg/support" class="nav-item">
+									Support Server
+								</a>
+								<a href="invite.html"
+									class="nav-item">
+									<span>Invite</span>
+								</a> 		
+								
+					</div>
+				</div>
+			</header>
+		</div>
+
+<!-- Hero content: will be in the middle -->
+<title>Thunderstruck - Home</title>
+<div id="particles-js"></div>
+<div class="hero-body">
+	<div class="container has-text-centered">
+		<h1 class="title">
+			<img src="dashboard/public/images/loho.png" style="border-radius: 50%; width: 5em;">
+		</h1>
+		<h2 class="subtitle" style="margin-top: 1em;">
+			A Multi - Functionality <img src="dashboard/public/images/discord-logo.svg"
+				style="width: 5em; vertical-align: middle; margin-bottom: 0.2em;"> bot.
+			<div class="info">
+				<marquee width="100%" direction="left" height="30px" bgcolor="black">
+					Thunderstruck is still not a verified bot on Discord yet this means we are temporarily limited to 100 servers!, Please bare with us as we apply for verification! Thunderstruck is currently in 85 guilds.
+				</marquee>
+				<nav class="level" style="margin-top: 2em;">
+					<div class="level-item has-text-centered">
+						<div>
+							<p class="heading">Guilds</p>
+							<p class="title">85</p>
+						</div>
+					</div>
+					<div class="level-item has-text-centered">
+						<div>
+							<p class="heading">Channels</p>
+							<p class="title">2,783</p>
+						</div>
+					</div>
+					<div class="level-item has-text-centered">
+						<div>
+							<p class="heading">Users</p>
+							<p class="title">182,230</p>
+						</div>
+					</div>
+					<div class="level-item has-text-centered">
+						<div>
+							<p class="heading">Commands</p>
+							<p class="title">163</p>
+						</div>
+					</div>
+					<div class="level-item has-text-centered">
+						<div>
+							<p class="heading">Uptime</p>
+							<p class="title">a day</p>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</h2>
+		<div style="margin-top:3em;">
+			<a href="invite.html" class=" button is-info is-inverted "
+				style="background-color: #ffbebb00; color: #ffffff; border-color: white;">
+				<span>Invite Thunderstruck To Your Server</span>
+			</a>
+		</div>
+	</div>
+</div>
+</section>
+</body>
+<script src="dashboard/public/js/particles.min.js"></script>
+<script>
+	particlesJS('particles-js', {
+		"particles": {
+			"number": {
+				"value": 50,
+				"density": {
+					"enable": true,
+					"value_area": 800
+				}
+			},
+			"color": {
+				"value": "#ffffff"
+			},
+			"shape": {
+				"type": "circle",
+				"stroke": {
+					"width": 0,
+					"color": "#000000"
+				},
+				"polygon": {
+					"nb_sides": 5
+				},
+				"image": {
+					"src": "https://thunderstruck.gg/dashboard/public/images/github.svg",
+					"width": 100,
+					"height": 100
+				}
+			},
+			"opacity": {
+				"value": 0.5,
+				"random": false,
+				"anim": {
+					"enable": false,
+					"speed": 1,
+					"opacity_min": 0.1,
+					"sync": false
+				}
+			},
+			"size": {
+				"value": 3,
+				"random": true,
+				"anim": {
+					"enable": false,
+					"speed": 40,
+					"size_min": 0.1,
+					"sync": false
+				}
+			},
+			"line_linked": {
+				"enable": true,
+				"distance": 150,
+				"color": "#ffffff",
+				"opacity": 0.4,
+				"width": 0.9469771699587272
+			},
+			"move": {
+				"enable": true,
+				"speed": 1.5782952832645452,
+				"direction": "none",
+				"random": false,
+				"straight": false,
+				"out_mode": "out",
+				"bounce": false,
+				"attract": {
+					"enable": false,
+					"rotateX": 600,
+					"rotateY": 1200
+				}
+			}
+		},
+		"interactivity": {
+			"detect_on": "canvas",
+			"events": {
+				"onhover": {
+					"enable": false,
+					"mode": "repulse"
+				},
+				"onclick": {
+					"enable": true,
+					"mode": "push"
+				},
+				"resize": true
+			},
+			"modes": {
+				"grab": {
+					"distance": 400,
+					"line_linked": {
+						"opacity": 1
+					}
+				},
+				"bubble": {
+					"distance": 400,
+					"size": 40,
+					"duration": 2,
+					"opacity": 8,
+					"speed": 3
+				},
+				"repulse": {
+					"distance": 200,
+					"duration": 0.4
+				},
+				"push": {
+					"particles_nb": 4
+				},
+				"remove": {
+					"particles_nb": 2
+				}
+			}
+		},
+		"retina_detect": true
+	});
+</script>
+</html>
